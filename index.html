@@ -64,7 +64,15 @@ button{
 }
 </style>
 
-</head>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init({
+publicKey: "PbXYYbT7WoSVeB7ej",
+});
+})();
+</script></head>
 
 <body>
 
@@ -79,7 +87,7 @@ button{
 </p>
 
 <div style="font-size:80px;">
-🐱💃 🐱💃 🐱💃
+🐱 🐱 🐱
 </div>
 
 <button id="si">Sí ❤️</button> <button id="no">No 😿</button>
@@ -89,14 +97,26 @@ button{
 <script>
 
 document.getElementById("si").onclick = function(){
-    document.body.innerHTML = `
-    <div style="margin-top:100px;text-align:center;">
-    <h1>🎉 ¡SIIII! 🎉</h1>
-    <h2>Gracias por aceptar ❤️</h2>
-    <div style="font-size:100px;">🐱💖🐱</div>
-    <p>Prometo que será una salida divertida 😎</p>
-    </div>
-    `;
+
+emailjs.send(
+"service_v4o2jhw",
+"template_2bxukc8",
+{
+name: "Esperanza",
+email: "[acepto@invitacion.com](mailto:acepto@invitacion.com)"
+}
+);
+
+document.body.innerHTML = `
+
+<div style="margin-top:100px;text-align:center;">
+<h1>🎉 ¡SIIII! 🎉</h1>
+<h2>Gracias por aceptar ❤️</h2>
+<div style="font-size:100px;">🐱❤️🐱</div>
+<p>Prometo que será una salida divertida 😎</p>
+<p>📧 ¡Ya le avisé a Rafael!</p>
+</div>
+`;
 }
 
 const botonNo = document.getElementById("no");
