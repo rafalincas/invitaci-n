@@ -98,6 +98,9 @@ publicKey: "PbXYYbT7WoSVeB7ej",
 <script>
 
 document.getElementById("si").onclick = function(){
+
+alert("Botón Sí funcionando");
+    
 if (typeof confetti === "function") {
   confetti({
     particleCount: 250,
@@ -110,7 +113,7 @@ emailjs.send(
 "template_2bxukc8",
 {
 name: "Esperanza",
-email: "[acepto@invitacion.com](mailto:acepto@invitacion.com)"
+email: "acepto@invitacion.com"
 }
 );
 
