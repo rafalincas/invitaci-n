@@ -72,7 +72,7 @@ emailjs.init({
 publicKey: "PbXYYbT7WoSVeB7ej",
 });
 })();
-</script><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</script>
 </head>
 
 <body>
@@ -87,10 +87,11 @@ publicKey: "PbXYYbT7WoSVeB7ej",
 ¿Aceptas salir conmigo este martes a las 4? 🌹
 </p>
 
-<div style="font-size:80px;">
-🐱 🐱 🐱
-</div>
+<div>
+<img src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif" width="220">
 
+<img src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif" width="220">
+</div>
 <button id="si">Sí ❤️</button> <button id="no">No 😿</button>
 
 </div>
@@ -99,13 +100,6 @@ publicKey: "PbXYYbT7WoSVeB7ej",
 
 document.getElementById("si").onclick = function(){
     
-if (typeof confetti === "function") {
-  confetti({
-    particleCount: 250,
-    spread: 180,
-    origin: { y: 0.6 }
-  });
-}
 emailjs.send(
 "service_v4o2jhw",
 "template_2bxukc8",
