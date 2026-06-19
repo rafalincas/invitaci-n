@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitación para Ess ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background: linear-gradient(135deg,#ffb6c1,#ffd1dc);
+    text-align:center;
+    overflow:hidden;
+}
+
+.container{
+    margin-top:80px;
+}
+
+h1{
+    color:#ff1493;
+    font-size:3em;
+}
+
+p{
+    font-size:1.5em;
+}
+
+button{
+    padding:15px 30px;
+    margin:15px;
+    border:none;
+    border-radius:30px;
+    font-size:1.2em;
+    cursor:pointer;
+}
+
+#si{
+    background:#ff1493;
+    color:white;
+}
+
+#no{
+    background:#666;
+    color:white;
+    position:absolute;
+}
+
+.corazon{
+    position:absolute;
+    color:red;
+    animation:caer 5s linear infinite;
+}
+
+@keyframes caer{
+    from{
+        transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(100vh);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>😺❤️ Esperanza ❤️😺</h1>
+
+<h2>Los gatos tienen una pregunta importante...</h2>
+
+<p>
+¿Aceptas salir conmigo este martes a las 4? 🌹
+</p>
+
+<div style="font-size:80px;">
+🐱💃 🐱💃 🐱💃
+</div>
+
+<button id="si">Sí ❤️</button> <button id="no">No 😿</button>
+
+</div>
+
+<script>
+
+document.getElementById("si").onclick = function(){
+    document.body.innerHTML = `
+    <div style="margin-top:100px;text-align:center;">
+    <h1>🎉 ¡SIIII! 🎉</h1>
+    <h2>Gracias por aceptar ❤️</h2>
+    <div style="font-size:100px;">🐱💖🐱</div>
+    <p>Prometo que será una salida divertida 😎</p>
+    </div>
+    `;
+}
+
+const botonNo = document.getElementById("no");
+
+botonNo.addEventListener("mouseover",()=>{
+    botonNo.style.left=Math.random()*80+"vw";
+    botonNo.style.top=Math.random()*80+"vh";
+});
+
+for(let i=0;i<30;i++){
+    let c=document.createElement("div");
+    c.className="corazon";
+    c.innerHTML="❤️";
+    c.style.left=Math.random()*100+"vw";
+    c.style.animationDuration=(Math.random()*3+3)+"s";
+    document.body.appendChild(c);
+}
+</script>
+
+</body>
+</html>
